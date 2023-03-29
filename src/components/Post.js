@@ -250,7 +250,12 @@ const Post = ({ post, tampil }) => {
         </PPostText> */}
         <PPostText>{post.isi}</PPostText>
         {/* <ImgPost src={gambarPost} /> */}
-        <ImgPost src={post.gambar} />
+        {post.gambar && (
+          <ImgPost src={`http://localhost:4000/${post.gambar}`} />
+        )}
+
+        
+
         <DivPostRow>
           <div>
             <DivIcon>
